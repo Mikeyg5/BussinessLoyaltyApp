@@ -1,0 +1,43 @@
+body {
+  background-image: url("https://livingoncookies.com/wp-content/uploads/2023/05/Vanilla-Cupcakes-00509JPEGe.jpg");
+  background-size: 100% 1720px;
+}
+fieldset {
+  height: 300px;
+  border: 2.5px solid #1DACD6;
+  border-radius: 20px;
+  width: 250px;
+  background-color: white;
+  opacity: .8;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+h2 {
+  text-indent: 5px;
+  color: #FF91AF;
+}
+label{
+  color: #FF91AF;
+  font-size: 20px;
+}
+#fdiv{
+  position: relative;
+  top: 5%;
+}
+#subbutton{
+  position: relative;
+  top: 10%;
+  width: 180px;
+  height: 300px;
+  border-radius: 20px;
+  height: 35px;
+  color: #FF91AF;
+  background-color: #89CFF0;
+}
+#fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
