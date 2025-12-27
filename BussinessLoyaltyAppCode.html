@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic HTML Page with Toolbar</title>
+  <style>
+    body{
+  display: flex;
+  padding-bottom: 60px;
+}
+html, body{ 
+  margin: 0;
+  padding: 0;
+}
+.content{
+  background-color: blue;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.toolbar{
+  position: fixed;
+  bottom: 1px;
+  left: 0;
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+.toolbar button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+}
+
+.tptoolbar {
+  position: fixed;
+  top: 1px;
+  right: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tptoolbar button{
+  height: 40px;
+  width: 40px;
+}
+</style>
+</head>
+<body>
+    <div class="content">
+      <div class="tptoolbar">
+       <button><img src="content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FCoding%20Storage%2FBusiness%20App::primary:Documents/Coding Storage/Business App/shopping-cart.png"></button>
+       <button>Points</button>
+      </div>
+        <h1>Welcome to My Page</h1>
+        <p>This is a simple HTML template with a static toolbar at the bottom.
+        </p>
+      <div class="toolbar">
+        <button class="home-btn">Home</button>
+        <button class="shopping-cart-btn"> <img "Documents/Coding Storage/Business App/shopping-cart.png"> </button>
+        <button class="qr-code-btn">QR Code</button>
+        <button class="rewards-btn">Rewards</button>
+        <button class="settings-btn">Settings</button>
+    </div>  
+    </div>
+</body>
+</html>
