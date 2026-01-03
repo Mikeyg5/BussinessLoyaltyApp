@@ -50,8 +50,8 @@ html, body{
 }
 
 .tptoolbar button{
-  height: 40px;
-  width: 40px;
+  height: 47px;
+  width: 47px;
 }
 
 .home-btn{
@@ -60,23 +60,45 @@ html, body{
 .centered{
   text-align: center;
 }
+.border {
+  border: 2px solid black;
+}
+
+.content2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 10px;
+  margin: 40px;
+}
+
+.white{
+  color:white;
+}
+
+.weekly{
+  height: 150px;
+  width:150px;
+}
 </style>
 </head>
 <body>
     <div class="content">
       <div class="tptoolbar">
-       <button><img src="content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FCoding%20Storage%2FBusiness%20App::primary:Documents/Coding Storage/Business App/shopping-cart.png"></button>
-       <button>Points</button>
-      </div><br><br>
-        <h1 class="centered">This weeks deals</h1>
-        <h3 class = "centered">Check out our Weekly Deals
+       <button>Cart</button></button>
+       <button>5215~</button>
+      </div><br><br><br>
+        <h1 class="centered white">This weeks deals</h1>
+        <h3 class = "centered white">Check out our Weekly Deals
         </h3>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="content2">
+        <button><div class="border weekly">Cacio e Pepe</div></button>
+        <button><div class="border weekly">Pizza Margherita</div></button>
+        <button><div class="border weekly">Tuscan Bistecca</div></button>
+        <button><div class="border weekly">Gelato</div></button>
+        <button><div class="border weekly">Risotto alla Milanese</div></button>
+        <button><div class="border weekly">Tiramisu</div></button>
+        </div>
       <div class="toolbar">
         <a><button class="home-btn">Home</button></a>
         <a href="/BussinessLoyaltyAppCart.html"><button class="shopping-cart-btn"> Cart</button></a>
@@ -87,3 +109,64 @@ html, body{
     </div>
 </body>
 </html>
+
+<!--
+  <h1>Product List</h1>
+  <div>
+    <button onclick="addToCart('item1', 10)">Add Item 1 ($10)</button>
+    <button onclick="addToCart('item2', 20)">Add Item 2 ($20)</button>
+  </div>
+
+  <h2>Cart</h2>
+  <ul id="cart-items"></ul>
+
+  <button onclick="updateCart()">Update Cart</button>
+  <button onclick="clearCart()">Clear Cart</button>
+
+  <script>
+    // Add item to the cart
+    function addToCart(item, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingItem = cart.find(i => i.item === item);
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ item, price, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    // Render cart items
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItemsList = document.getElementById('cart-items');
+      cartItemsList.innerHTML = '';
+
+      cart.forEach(({ item, price, quantity }) => {
+        const li = document.createElement('li');
+        li.textContent = `${item} - $${price} x ${quantity}`;
+        cartItemsList.appendChild(li);
+      });
+    }
+
+    // Update cart (e.g., to recalculate totals, etc.)
+    function updateCart() {
+      // For simplicity, we'll just re-render the cart
+      renderCart();
+    }
+
+    // Clear the cart
+    function clearCart() {
+      localStorage.removeItem('cart');
+      renderCart();
+    }
+
+    // Initial render
+    renderCart();
+  </script>
+</body>
+</html>
+-->
