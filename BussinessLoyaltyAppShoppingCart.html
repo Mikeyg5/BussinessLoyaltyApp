@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BussinessLoyaltyAppCode</title>
+  <title>BussinessLoyaltyAppCart</title>
   <style>
     body{
   display: flex;
@@ -50,30 +50,40 @@ html, body{
 }
 
 .tptoolbar button{
-  height: 40px;
-  width: 40px;
+  height: 47px;
+  width: 47px;
 }
 
-.qr-code-btn {
+.shopping-cart-btn{
   color: blue;
+}
+
+.centered{
+  text-align: center;
+}
+
+.white{
+  color:white;
 }
 </style>
 </head>
 <body>
     <div class="content">
       <div class="tptoolbar">
-       <button><img src="content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FCoding%20Storage%2FBusiness%20App::primary:Documents/Coding Storage/Business App/shopping-cart.png"></button>
-       <button>Points</button>
-      </div>
-        <h1>Welcome to My Page</h1>
-        <p>This is a simple HTML template with a static toolbar at the bottom.
-        </p>
+       <button>Cart</button></button>
+       <button>5215~</button>
+      </div><br><br><br>
+        <h1 class="centered white">This is your cart!</h1>
+        <p class="centered white">Check your cart items below. You can add or remove items as you like.</p>
+        <div class="content3">
+          
+        </div>
       <div class="toolbar">
         <a href="/BussinessLoyaltyAppHome.html"><button class="home-btn">Home</button></a>
-        <a href="/BussinessLoyaltyAppCart.html"><button class="shopping-cart-btn"> Cart</button></a>
-        <a><button class="qr-code-btn">QR Code</button></a>
+        <a><button class="shopping-cart-btn"> Cart</button></a>
+        <a href="/BussinessLoyaltyAppCode.html"><button class="qr-code-btn">QR Code</button></a>
         <a href="/BussinessLoyaltyAppRewards.html"><button class="rewards-btn">Rewards</button></a>
-        <a href="BussinessLoyaltyAppSettings.html"><button class="settings-btn">Settings</button></a>
+        <a href="/BussinessLoyaltyAppSettings.html"><button class="settings-btn">Settings</button></a>
     </div>  
     </div>
 </body>
